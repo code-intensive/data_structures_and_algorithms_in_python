@@ -1,7 +1,5 @@
 from typing import Dict
 
-from pprint import pprint
-
 from edges import edge_list
 from builders import build_graph
 
@@ -20,4 +18,5 @@ def undirected_has_path(*, graph:Dict, source:str, destination:str, visited:dict
     
     return False
 
-print(undirected_has_path(graph=graph, source='i', destination='k', visited={}))
+if __name__ == '__main__':
+    print(undirected_has_path(graph=graph, source='i', destination='k', visited={}))
