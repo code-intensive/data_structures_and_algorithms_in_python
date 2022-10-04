@@ -15,5 +15,6 @@ def breadth_first_search(graph:dict, source:str):
         
         for neighbour in neighbours:
             queue.insert(0, neighbour)
-            
-breadth_first_search(graph, 'a')
+
+if __name__ == '__main__':            
+    breadth_first_search(graph, 'a')

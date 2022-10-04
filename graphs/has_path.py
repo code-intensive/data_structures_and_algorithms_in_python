@@ -1,5 +1,7 @@
 from typing import Dict
 
+from graphs import graph
+
 
 def has_path(*, graph:Dict, source:str, destination:str) -> bool:
     if source == destination:
@@ -12,3 +14,5 @@ def has_path(*, graph:Dict, source:str, destination:str) -> bool:
     
     return False
 
+if __name__ == '__main__':
+    print(has_path(graph=graph, source='c', destination='e'))

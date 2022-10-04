@@ -14,4 +14,5 @@ def depth_first_search(graph:Dict, source:str) -> List:
         for neighbour in graph[current]:
             stack.append(neighbour)
 
-depth_first_search(graph, 'a')
+if __name__ == '__main__':
+    print(depth_first_search(graph, 'a'))

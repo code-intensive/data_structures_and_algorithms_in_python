@@ -1,6 +1,8 @@
 from typing import Any, List
 
 
+from utils.utils import get_data, print_linkedlist
+
 class Node:
     def __init__(self, data: Any) -> None:
         self.data = data
@@ -21,22 +23,6 @@ class LinkedList:
         self.next = next
 
 
-def get_data(data_list: List = None) -> List:
-    """Recursively get dummy data to populate the linked list"""
-
-    data = input("Kindly enter data to create new node: ")
-    if data == '.':
-        return data_list
-    data_list = data_list or []
-
-    if data == '':
-        print('Please enter a valid data...')
-    else:
-        data_list.append(data)
-
-    return get_data(data_list)
-
-
 def main() -> None:
     head = Node(8)
     linked_list = LinkedList(head)
@@ -46,9 +32,7 @@ def main() -> None:
     for data in data_list:
         linked_list.push(data)
 
-    while linked_list.next:
-        print(linked_list.next.data)
-        linked_list = linked_list.next
+    print_linkedlist(linked_list)
 
 
 if __name__ == '__main__':
